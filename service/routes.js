@@ -21,8 +21,8 @@ router.get('/', (req, res) => {
   res.status(status.HTTP_200_OK).json({
     status: status.HTTP_200_OK,
     message: 'Hit Counter Service',
-    version: '1.0.0',
-    url: `${req.protocol}://${req.get('host')}/counters`
+    version: '1.0.0',.
+      url: `${req.protocol}://${req.get('host')}/counters`
   })
 })
 
@@ -120,7 +120,7 @@ router.delete('/counters/:name', (req, res) => {
 /**
  * Utility function for testing - reset all counters
  */
-function resetCounters () {
+function resetCounters() {
   if (process.env.NODE_ENV === 'test') {
     COUNTER = {}
   }
